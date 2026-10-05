@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#F4F5FB" />
+    <title>Compras da semana | quicklist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <header class="brand" aria-label="quicklist">
+      <img src="assets/logo.svg" width="31" height="24" alt="" />
+      <span>quicklist</span>
+    </header>
+
+    <main class="page">
+      <button class="back-link" id="back-button" type="button">
+        <img src="assets/icons/arrow-left.svg" width="11" height="10" alt="" />
+        Voltar
+      </button>
+
+      <h1>Compras da semana</h1>
+
+      <form class="add-form" id="add-form" autocomplete="off">
+        <label class="sr-only" for="new-item">Novo item da lista</label>
+        <input
+          id="new-item"
+          name="item"
+          type="text"
+          placeholder="Adicione um novo item"
+          maxlength="120"
+          required
+        />
+        <button class="add-button" type="submit">Adicionar item</button>
+      </form>
+
+      <ul class="shopping-list" id="shopping-list" aria-label="Itens da lista"></ul>
+
+      <div class="toast" id="remove-toast" role="status" aria-live="polite" hidden>
+        <img
+          src="assets/icons/warning-circle-filled.svg"
+          width="20"
+          height="20"
+          alt=""
+        />
+        <span>O item foi removido da lista</span>
+        <button id="dismiss-toast" type="button" aria-label="Fechar aviso">
+          <img src="assets/icons/delete-small.svg" width="20" height="20" alt="" />
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
